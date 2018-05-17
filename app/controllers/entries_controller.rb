@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    @entries = current_user.entries
   end
 
   # GET /entries/1
@@ -25,6 +25,7 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
+    @entry.user_id = current_user.id if current_user
 
     respond_to do |format|
       if @entry.save
@@ -69,6 +70,6 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:business_name, :phone)
+      params.require(:entry).permit(:last_name, :first_name, :business_name, :phone, :email, :web_address, :marketing_copy,:phone_number, :mailing_address_1,:mailing_address_2, :country, :city, :state,:zip, :image)
     end
 end

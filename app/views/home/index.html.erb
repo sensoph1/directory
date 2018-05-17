@@ -1,13 +1,16 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Welcome!</h1>
 <% if current_user.nil? %>
 	<%= link_to new_user_session_path, class: 'login-button' do %>Login<% end %>
     <%= link_to new_user_registration_path, class: 'register' do %>Register<% end %>  
+<% elsif can? :manage, User %>
+<h3>Superadmin Portal</h3>
+<%= link_to rails_admin.dashboard_path, class: 'login-button' do %>Dashboard<% end %>
+<%= link_to entries_path, class: 'login-button' do %>Go to App<% end %>
+<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>     
 <% else %>
+	
 	<%= link_to entries_path, class: 'login-button' do %>Go to App<% end %>
 	<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
 
 <% end %>
-<% if can? :manage, User %>
-	<p>Visible only for superadmins and supervisors! </p>
-<% end %>
+

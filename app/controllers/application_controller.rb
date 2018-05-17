@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
  
   before_action :authenticate_user!
     def after_sign_in_path_for(resource)
-        entries_path
+        root_path
+        #rails_admin.dashboard_path
     end
 end
