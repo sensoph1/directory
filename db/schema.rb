@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_16_214613) do
+ActiveRecord::Schema.define(version: 2018_05_17_192212) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_05_16_214613) do
   end
 
   create_table "entries", force: :cascade do |t|
+    t.integer "user_id"
     t.string "business_name", limit: 50
     t.string "phone"
     t.string "last_name"
@@ -48,9 +49,9 @@ ActiveRecord::Schema.define(version: 2018_05_16_214613) do
     t.string "state", limit: 20
     t.string "country", limit: 50
     t.string "zip", limit: 10
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.index ["user_id"], name: "index_entries_on_user_id"
   end
 

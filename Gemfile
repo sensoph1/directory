@@ -30,7 +30,8 @@ gem 'toastr-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'cancancan'
-
+gem 'carrierwave'
+gem 'cloudinary'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '~> 1.3'
 # Use Capistrano for deployment

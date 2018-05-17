@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :business_name %>
-    <%= form.text_field :business_name, id: :business_business_name %>
+    <%= form.label :entry_name %>
+    <%= form.text_field :entry_name, id: :entry_business_name %>
   </div>
 
   <div class="field">
     <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :business_first_name %>
+    <%= form.text_field :first_name, id: :first_name %>
   </div>
 
   <div class="field">
     <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :business_last_name %>
+    <%= form.text_field :last_name, id: :ast_name %>
   </div>
 
   <div class="field">
@@ -74,6 +74,12 @@
     <%= form.label :zip %>
     <%= form.text_field :zip, id: :business_phone %>
   </div>
+  <div>
+  
+
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+</div>
 
   <div class="field">
     <%= form.label :marketing_copy %>
