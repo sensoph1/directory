@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :entry_name %>
-    <%= form.text_field :entry_name, id: :entry_business_name %>
+    <%= form.label :business_name %>
+    <%= form.text_field :business_name, id: :entry_business_name %>
   </div>
 
   <div class="field">
@@ -23,67 +23,65 @@
 
   <div class="field">
     <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :ast_name %>
+    <%= form.text_field :last_name, id: :last_name %>
   </div>
 
   <div class="field">
     <%= form.label :phone %>
-    <%= form.text_field :phone, id: :business_phone %>
+    <%= form.text_field :phone, id: :phone %>
   </div>
 
 
     <div class="field">
       <%= form.label :email %>
-      <%= form.text_field :email, id: :business_phone %>
+      <%= form.text_field :email, id: :email %>
     </div>
   <div class="field">
     <%= form.label :web_address %>
-    <%= form.text_field :web_address, id: :business_phone %>
+    <%= form.text_field :web_address, id: :website %>
   </div>
 
 
   <div class="field">
     <%= form.label :mailing_address_1 %>
-    <%= form.text_field :mailing_address_1, id: :business_phone %>
+    <%= form.text_field :mailing_address_1, id: :mailing_address_1 %>
   </div>
 
 
   <div class="field">
     <%= form.label :mailing_address_2 %>
-    <%= form.text_field :mailing_address_2, id: :business_phone %>
+    <%= form.text_field :mailing_address_2, id: :mailing_address_2 %>
   </div>
 
 
   <div class="field">
     <%= form.label :country %>
-    <%= form.text_field :country, id: :business_phone %>
+    <%= form.text_field :country, id: :country %>
   </div>
 
   <div class="field">
     <%= form.label :city %>
-    <%= form.text_field :city, id: :business_phone %>
+    <%= form.text_field :city, id: :city %>
   </div>
 
 
   <div class="field">
     <%= form.label :state %>
-    <%= form.text_field :state, id: :business_phone %>
+    <%= form.text_field :state, id: :state %>
   </div>
 
   <div class="field">
     <%= form.label :zip %>
-    <%= form.text_field :zip, id: :business_phone %>
+    <%= form.text_field :zip, id: :zip %>
   </div>
   <div>
-  
-
-    <%= form.label :image %>
-    <%= form.file_field :image %>
+     <%= form.label :image %>
+    <%= form.file_field :image, id: :image %>
 </div>
 
   <div class="field">
     <%= form.label :marketing_copy %>
-    <%= form.text_area :marketing_copy, id: :business_phone %>
+    <%= form.text_area :marketing_copy, id: :marketing_copy %>
   </div>
 
   <div class="actions">

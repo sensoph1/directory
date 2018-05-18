@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div>
 <p>
   <strong>entry name:</strong>
   <%= @entry.business_name %>
@@ -46,6 +46,8 @@
 <p><strong>State:</strong><%= @entry.state %></p>
 <p><strong>Zip:</strong><%= @entry.zip %></p>
 <p><strong>Marketing Copy:</strong><%= @entry.marketing_copy %></p>
-
+</div>
+<div>
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
+</div>
