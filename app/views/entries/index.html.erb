@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Entries</h1>
+<h1>Businesses</h1>
 
 <table>
   <thead>
     <tr>
       <th>Business name</th>
       <th>Phone</th>
-      
-      <th colspan="3"></th>
+      <th>email</th>
+      <th colspan="3">Controls</th>
     </tr>
   </thead>
 
@@ -17,6 +17,7 @@
       <tr>
         <td><%= entry.business_name %></td>
         <td><%= entry.phone %></td>
+        <td><%= entry.email %></td>
         <td>  <a href="<%= entry.image_url %>" target="_blank">
         <%= image_tag(entry.image.thumbnail.url, :class => "thumbnail inline") %>
       </a>

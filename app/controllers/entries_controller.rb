@@ -4,7 +4,13 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
+    if can? :manage, User #is user a superuser%>
+    @entries = Entry.all
+    
+    else
     @entries = current_user.entries
+   
+    end
   end
 
   # GET /entries/1
